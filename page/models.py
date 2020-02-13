@@ -7,3 +7,6 @@ class Post(models.Model):
     pub_date = models.DateTimeField('publish')
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     content = models.TextField()
+
+    def __str__(self):
+        return self.title
